@@ -989,3 +989,9 @@ sql("SELECT * FROM mytable1")
 sql("DROP mydb1")
 ```
 ****
+## 6. 对接分布式DAE
+实现在 BML Notebook 中用Python接口 直接做 DAE分布式查询，通过 sql 和 csql 函数区分本地和远程 sql：
+```
+from dae import csql
+csql("select * from remote_table").show()
+```
